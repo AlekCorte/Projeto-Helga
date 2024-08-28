@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conteúdo Dinâmico</title>
+    <link rel="stylesheet" href="./styles/content.css">
+</head>
+<body>
+
+
+    <main>
+        <div class="voltar">
+            <a href="index.html"><img src="/imgs/voltar.png" alt=""></a>
+        </div>
+        <section>
+            <div id="content">
+                <h2>Bem-vindo!</h2>
+                <p>Selecione um link na página anterior para ver o conteúdo.</p>
+            </div>
+            <a href=""><button class="botao">Agendar consulta</button></a>
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="footer-coluna">
+            <div class="servicos-footer">
+                <h2 class="titulo-footer">Serviços</h2>
+                <p>Consulta Materno Infantil</p>
+                <p>Retorno de consulta</p>
+            </div>
+            <div class="blog-footer">
+                <h2 class="titulo-footer">Blog e Ebooks</h2>
+                <p>Bebês</p>
+                <p>Crianças</p>
+                <p>Ebook Guia alimentar para crianças brasileiras menores de 2 anos</p>
+            </div>
+        </div>
+        <div class="footer-coluna">
+            <div class="contato-footer">
+                <h2 class="titulo-footer">Contato</h2>
+                <p>Clínica Verbum
+                    <br>
+                    Rua Arminda de Lima, 301 - Centro de Guarulhos
+                </p>
+            </div>
+            <div class="imgs-footer">
+                <a href="https://www.instagram.com/helga.nutrinfantil/"><img src="./imgs/instagram.png" alt=""></a>
+            </div>
+        </div>
+        <div class="footer-terceira-coluna">
+            <img src="./imgs/logo.png" alt="" class="logo">
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Função para obter o valor de uma query string
+            function getQueryParam(param) {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(param);
+            }
+
+            // Função para definir o conteúdo com base na query string
+            function loadContent() {
+                const contentId = getQueryParam('content');
+                const content = {
+                    conteudo1: "<h2>Como lidar com intolerâncias ou alergias alimentares no meu filho?</h2><p>Lidar com intolerâncias ou alergias alimentares no seu filho exige uma abordagem cuidadosa e informada. Primeiro, é fundamental obter um diagnóstico preciso através de um médico ou alergologista, que pode realizar testes específicos para identificar os alimentos que causam reações adversas. Uma vez identificados, esses alimentos devem ser completamente eliminados da dieta do seu filho.A leitura cuidadosa dos rótulos dos alimentos é essencial para evitar a exposição inadvertida aos alérgenos. <br><br> Além disso, é importante educar toda a família e cuidadores sobre a alergia ou intolerância, garantindo que todos saibam como evitar os alimentos desencadeantes e como agir em caso de uma reação alérgica. <br><br>Para garantir que seu filho continue a receber todos os nutrientes necessários, considere consultar um nutricionista pediátrico. Este profissional pode ajudar a criar um plano alimentar que exclua os alérgenos, mas que seja balanceado e nutritivo.</p>",
+
+
+                    conteudo2: "<h2>Vale a pena comprar comida orgânica para meu filho?</h2><p>Optar por alimentos orgânicos para seu filho pode oferecer benefícios, pois são cultivados sem pesticidas sintéticos, fertilizantes químicos ou OGMs, reduzindo a exposição a resíduos químicos. Alguns estudos sugerem que alimentos orgânicos podem ter níveis mais altos de certos nutrientes e menores níveis de metais pesados.<br><br>No entanto, a evidência sobre os benefícios nutricionais dos alimentos orgânicos ainda é mista. O essencial é garantir uma dieta balanceada rica em frutas, legumes, grãos integrais e proteínas magras, seja orgânica ou não. Considere o custo, já que alimentos orgânicos são mais caros. Uma abordagem equilibrada pode ser priorizar orgânicos para produtos com maiores níveis de resíduos de pesticidas, como morangos e espinafre.<br><br>É crucial consultar um nutricionista pediátrico para orientações personalizadas, garantindo que seu filho receba todos os nutrientes necessários para um crescimento saudável.</p>",
+
+
+                    conteudo3: "<h2>Qual a quantidade de comida que meu filho deveria estar comendo?</h2><p>Determinar a quantidade adequada de comida para seu filho é essencial para seu crescimento saudável. Varia com idade, peso, altura, atividade física e metabolismo. As diretrizes recomendam porções específicas para cada faixa etária, adaptadas às necessidades nutricionais em mudança durante o crescimento.<br><br>Observar os sinais de fome e saciedade é crucial para desenvolver hábitos alimentares saudáveis desde cedo. Uma dieta equilibrada deve incluir alimentos variados como frutas, vegetais, grãos integrais, proteínas magras e laticínios ou alternativas lácteas. <br><br>Consultar um nutricionista pediátrico pode oferecer orientações personalizadas, calculando porções ideais conforme as necessidades específicas de crescimento e atividade física de seu filho.</p>",
+
+
+                    conteudo4: "<h2>Quais são algumas ideias de lanches saudáveis para as crianças?</h2><p>Oferecer lanches saudáveis é crucial para garantir que as crianças recebam nutrientes essenciais e mantenham níveis de energia estáveis. Algumas opções recomendadas incluem:<br>Frutas frescas: Maçãs, bananas, morangos ou fatias de melancia.<br>Vegetais crus: Cenouras baby, pepinos ou pimentões coloridos com molho de iogurte ou hummus.<br><br>Laticínios ou alternativas lácteas: Queijo cottage, iogurte natural ou leite com baixo teor de gordura.<br>Grãos integrais: Bolachas de arroz ou trigo integral, ou mini sanduíches de pão integral com pasta de grão-de-bico.<br>Smoothies caseiros: Feitos com frutas frescas, iogurte natural e gelo.<br><br>Essas opções não só oferecem nutrientes essenciais, mas também são práticas e geralmente bem aceitas pelas crianças. Para orientações personalizadas sobre lanches ideais para seu filho, é recomendável consultar um nutricionista pediátrico.</p>",
+
+
+                    conteudo5: "<h2>Como o paladar das crianças se desenvolve e como posso introduzir novos sabores?</h2><p>O paladar das crianças começa a se desenvolver ainda no útero, sendo influenciado pelos sabores dos alimentos consumidos pela mãe. Após o nascimento, essa evolução continua com a introdução do leite materno ou fórmula. À medida que crescem, o contato com diferentes alimentos sólidos amplia suas experiências gustativas.<br><br>A introdução de novos sabores deve ser gradual e variada, começando com alimentos suaves e progredindo para sabores mais complexos. Oferecer repetidamente novos alimentos, mesmo que inicialmente rejeitados, pode ajudar a aumentar a aceitação. Evitar temperos excessivos e optar por alimentos naturais é fundamental para que as crianças apreciem os sabores autênticos.<br><br>Consultar um nutricionista pediátrico é essencial para garantir que a introdução de novos sabores seja feita de maneira equilibrada e nutritiva, respeitando as necessidades individuais de cada criança e promovendo uma alimentação saudável e diversificada desde cedo.</p>",
+
+
+                    conteudo6: "<h2>Meu filho precisa tomar suplementos vitamínicos ou minerais?</h2><p>A necessidade de suplementos vitamínicos ou minerais para crianças deve ser avaliada cuidadosamente. Em geral, uma dieta equilibrada e variada fornece todos os nutrientes essenciais para o crescimento e desenvolvimento saudáveis.<br><br>No entanto, algumas crianças podem ter necessidades específicas devido a condições médicas, dietas restritivas ou dificuldades alimentares. Em tais casos, a suplementação pode ser necessária para prevenir deficiências nutricionais.<br><br>É fundamental evitar a suplementação indiscriminada, pois o excesso de vitaminas e minerais pode causar efeitos adversos. Consultar um nutricionista pediátrico é crucial para determinar se seu filho precisa de suplementos e, em caso afirmativo, quais são os mais apropriados</p>",
+
+
+                };
+                document.getElementById('content').innerHTML = content[contentId] || "<h2>Conteúdo não encontrado</h2>";
+            }
+
+            loadContent();
+        });
+    </script>
+
+    <script src="./js/mobile-nav-bar.js"></script>
+</body>
+</html>

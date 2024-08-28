@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+}
+
+body {
+    height: 100%;
+    width: 100vw;
+}
+
+nav {
+    background: white;
+    padding-top: 10px;
+    height: 10vh;
+    border-bottom: 1px solid #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    z-index: 1;
+}
+.mobile-menu {
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background: #464646E5;
+    margin: 8px;
+}
+
+
+
+
+.nav-esquerda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.lista-nav-centro {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 40px;
+}
+
+.item-lista-nav-centro {
+    font-size: 20px;
+    list-style: none;
+}
+
+.item-lista-nav-centro > a {
+    text-decoration: none;
+    color: #000000;
+    position: relative;
+    transition: color 0.3s ease;
+}
+.item-lista-nav-centro > a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    background: #F89749;
+    transition: width 0.3s ease;
+    bottom: 0;
+    left: 0;
+}
+
+.item-lista-nav-centro > a:hover {
+    color: #F89749
+}
+
+.item-lista-nav-centro > a:hover::after {
+    width: 100%; /* Largura total do link */
+}
+
+.nav-direita {
+    padding: 50px;
+}
+
+.logo-insta {
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.logo-insta:hover {
+    transform: scale(1.1);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    right: 20px;
+}
+
+
+
+
+
+
+
+
+
+main {
+    margin-top: 70px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+main img {
+    width: 1100px;
+    height: 325px;
+    margin-bottom: 20px;
+}
+
+
+h1 {
+    font-size: 58px;
+    color: #3B8B3B;
+}
+
+.texto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.subtitulo {
+    font-size: 32px;
+    color: #3B8B3B;
+}
+
+p {
+    max-width: 1100px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 38px;
+}
+
+
+#botao-contato {
+    width: 275px;
+    height: 65px;
+    color: white;
+    background: #F89749;
+    border: none;
+    border-radius: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#botao-contato:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+footer {
+    width: 100vw;
+    margin-top: 100px;
+    border-top: 1px solid rgb(160, 160, 160);
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-top: 40px;
+}
+
+.logo {
+    height: 300px;
+}
+
+.footer-coluna {
+    max-width: 25vw;
+}
+
+.titulo-footer {
+    margin-bottom: 10px;
+}
+
+.servicos-footer, .blog-footer, .contato-footer {
+    line-height: 30px;
+    font-size: 20px;
+    margin-bottom: 50px;
+} 
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1392px) {
+    main {
+        width: 80%;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    body {
+        overflow-x: hidden;
+    }
+    .lista-nav-centro {
+        position: absolute;
+        top: 9.9vh;
+        right: 0;
+        width: 30vw;
+        height: 200px;
+        flex-direction: column;
+        background-color: #fff;
+        display: flex;
+        transform: translateX(100%);
+        display: none;
+        transition: transform 0.3s ease-in;
+        z-index: 3;
+        border: 1px solid black;
+    }
+
+    .lista-nav-centro li {
+        text-align: left;
+        margin-left: 15px;
+        margin-top: 7px;
+    }
+    .mobile-menu {
+        display: block;
+    }
+    .lista-nav-centro.active {
+        transform: translateX(0);
+        display: block;
+    }
+
+
+
+
+    .nav-direita a {
+        display: none;
+    }
+    .section-mensagem {
+        width: 100%;
+    }
+    .mensagem-texto {
+        max-width: 100%;
+        width: 100%;
+    }
+    .mensagem-imagem {
+        display: none;
+    }
+
+    .footer-terceira-coluna {
+        display: none;
+    }
+
+    
+}

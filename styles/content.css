@@ -8,6 +8,17 @@
     font-family: 'Karla', sans-serif;
 }
 
+.elemento-aparecer {
+    opacity: 0; /* Inicialmente, os elementos estão invisíveis */
+    transform: translateY(20px); /* Deslocamento inicial */
+    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+.elemento-aparecer.visivel {
+    opacity: 1; /* Elemento se torna visível */
+    transform: translateY(0); /* Retorna à posição original */
+}
+
 body {
     height: 100%;
     width: 100vw;

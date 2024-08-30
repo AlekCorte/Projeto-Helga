@@ -312,6 +312,16 @@ footer {
         display: none;
     }
 
+    .nav-esquerda img {
+        width: 200px;
+        margin-left: -70px;
+        margin-top: 10px;
+    }
+
+    .faq-question p {
+        width: 90%;
+    }
+
 
 
 
@@ -341,5 +351,16 @@ footer {
         margin-left: -70px;
         margin-top: 10px;
     }
+
+    .faq-container {
+        width: 90%;
+    }
+
+    .faq-question {
+        width: 100%;
+    }
+   
+    
+    
 }
 

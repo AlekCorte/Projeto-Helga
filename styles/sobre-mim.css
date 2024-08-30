@@ -28,7 +28,7 @@ body {
 nav {
     background: white;
     padding-top: 10px;
-    height: 10vh;
+    height: 100px;
     border-bottom: 1px solid #000000;
     display: flex;
     justify-content: space-between;
@@ -365,6 +365,12 @@ footer {
     .lista-nav-centro.active {
         transform: translateX(0);
         display: block;
+    }
+
+    .nav-esquerda img {
+        width: 200px;
+        margin-left: -70px;
+        margin-top: 10px;
     }
 
     #foto {

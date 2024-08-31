@@ -246,6 +246,7 @@ main {
 .articles-duvidas {
     padding: 25px;
     max-width: 300px;
+    width: 100%;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -261,7 +262,8 @@ main {
 }
 
 .articles-duvidas > img {
-    width: 300px;
+    max-width: 300px;
+    width: 100%;
     height: 198px;
     border: 1px solid #3B8B3B;
     border-radius: 20px;
@@ -270,6 +272,7 @@ main {
 .legenda {
     color: #000000;
     max-width: 280px;
+    width: 100%;
     font-size: 16px;
     font-weight: 500;
 }
@@ -584,6 +587,8 @@ footer {
         margin-left: -70px;
         margin-top: 10px;
     }
+
+    
 }
 
 @media (max-width: 700px) {
@@ -598,6 +603,11 @@ footer {
 
     p {
         font-size: 12px;
+    }
+    .articles-duvidas {
+        width: 100%;
+        max-width: 500px;
+        flex-wrap: nowrap;
     }
 }
 

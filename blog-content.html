@@ -3,56 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/blog.css">
-    <title>Contato | Helga Ferraresi</title>
+    <title>Conteúdo Dinâmico</title>
+    <link rel="stylesheet" href="./styles/blog-content.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="nav-esquerda">
-                <img src="./imgs/logo.png" alt="" height="200px">
-
-                <ul class="lista-nav-centro">
-                    <li class="item-lista-nav-centro"><a href="index.html">Home</a></li>
-                    <li class="item-lista-nav-centro"><a href="sobre-mim.html">Sobre mim</a></li>
-                    <li class="item-lista-nav-centro"><a href="servicos.html">Serviços</a></li>
-                    <li class="item-lista-nav-centro"><a href="blog.html">Blog</a></li>
-                    <li class="item-lista-nav-centro"><a href="contato.html">Contato</a></li>
-                </ul>
-            </div>
-
-            <div class="nav-direita">
-                <div class="mobile-menu">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
-                </div>
-                <a href="https://www.instagram.com/helga.nutrinfantil/"><img src="./imgs/instagram.png" alt="" class="logo-insta"></a>
-            </div>
-        </nav>
-    </header>
-
-
-    
-
 
 
     <main>
         <div class="voltar">
-            <a href="index.html"><img src="/imgs/voltar.png" alt=""></a>
+            <a href="blog.html"><img src="/imgs/voltar.png" alt=""></a>
         </div>
         <section>
             <div id="content">
                 <h2>Bem-vindo!</h2>
                 <p>Selecione um link na página anterior para ver o conteúdo.</p>
             </div>
-            <a href=""><button class="botao">Agendar consulta</button></a>
         </section>
     </main>
 
-   
 
-    
     <footer>
         <div class="footer-coluna">
             <div class="servicos-footer">
@@ -84,8 +53,40 @@
         </div>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Função para obter o valor de uma query string
+            function getQueryParam(param) {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(param);
+            }
+
+            // Função para definir o conteúdo com base na query string
+            function loadContent() {
+                const contentId = getQueryParam('content');
+                const content = {
+                    conteudo1: "<h3>A Importância dos Primeiros Mil Dias de Vida na Alimentação Infantil</h3><div><img src='./imgs/bebe-amamentando.png' alt='Artigo 5'></div><p>Os primeiros mil dias de vida de uma criança, que incluem desde a concepção até o segundo ano de idade, são um período crucial para o desenvolvimento físico e cognitivo. Durante essa fase, as escolhas alimentares têm um impacto duradouro na saúde da criança, influenciando o desenvolvimento cerebral, a estrutura óssea, o sistema imunológico e até mesmo o risco de doenças crônicas na vida adulta. <br><br> Nos primeiros seis meses de vida, o leite materno é considerado o alimento ideal, fornecendo todos os nutrientes necessários e protegendo contra infecções. No entanto, a partir do momento em que os alimentos sólidos são introduzidos, é essencial garantir que a dieta da criança seja variada e rica em nutrientes como ferro, cálcio, vitaminas A e D, entre outros. <br><br> As deficiências nutricionais durante esses mil dias podem ter consequências graves e irreversíveis. Por exemplo, a falta de ferro pode prejudicar o desenvolvimento cognitivo, enquanto a carência de vitamina D pode afetar a saúde óssea.<br><br> 🔍 Nesse cenário, uma consulta com uma nutricionista infantil é essencial para guiar os pais em cada etapa dessa jornada, desde a amamentação até a introdução de alimentos sólidos. A orientação personalizada ajuda a garantir que a alimentação da criança esteja alinhada com suas necessidades específicas, promovendo um crescimento saudável e um futuro cheio de potencial.</p>",
+
+
+                    conteudo2: "<h3>Como Introduzir Alimentos Sólidos de Forma Segura e Eficiente</h3><div><img src='./imgs/pegando-frutas.png' alt='Artigo 5'></div><p>A introdução de alimentos sólidos é uma etapa marcante no desenvolvimento de uma criança. Essa fase, que geralmente começa por volta dos seis meses, é quando os bebês começam a explorar novos sabores, texturas e nutrientes além do leite materno ou fórmula. No entanto, essa transição pode gerar dúvidas e inseguranças nos pais, principalmente em relação a quais alimentos oferecer, como prevenir alergias e como garantir que a criança esteja recebendo todos os nutrientes necessários. <br><br> É importante introduzir os alimentos gradualmente, começando com opções simples, como frutas e vegetais amassados, e avançando para alimentos mais complexos à medida que o bebê se adapta. Além disso, a introdução de um alimento de cada vez permite identificar qualquer reação alérgica, o que é crucial para prevenir complicações. <br><br> Cada criança tem seu ritmo, e o papel dos pais é oferecer um ambiente seguro e encorajador para que o bebê explore os alimentos de forma positiva. Respeitar os sinais de fome e saciedade do bebê é fundamental para evitar associações negativas com a alimentação. <br><br> Uma nutricionista infantil pode ajudar a elaborar um plano de introdução alimentar que seja seguro e eficiente, adaptado às necessidades nutricionais e preferências da criança. Isso inclui orientação sobre a variedade de alimentos, porções adequadas e estratégias para lidar com possíveis rejeições alimentares, garantindo que essa fase seja uma experiência enriquecedora para o bebê.</p>",
+
+
+                    conteudo3: "<h3>Como lidar com a seletividade alimentar nas crianças?</h3><div><img src='./imgs/irmaos.png' alt='Artigo 5'></div><p>A seletividade alimentar é uma fase comum no desenvolvimento infantil, onde as crianças se tornam mais exigentes em relação ao que comem, muitas vezes recusando alimentos que antes eram aceitos. Essa fase, que pode ocorrer em diferentes momentos, geralmente começa entre 2 e 3 anos de idade, quando a criança começa a exercer mais independência e controle sobre suas escolhas. <br><br> Embora essa fase seja normal, pode ser frustrante para os pais, que se preocupam com a possibilidade de seus filhos não estarem recebendo os nutrientes necessários para um crescimento saudável. A seletividade pode resultar em uma dieta pobre em variedade, o que pode levar a deficiências nutricionais se não for abordada adequadamente. <br><br> É importante que os pais mantenham a calma e evitem transformar as refeições em uma batalha. Pressionar ou forçar a criança a comer pode criar uma relação negativa com a comida, o que pode ter efeitos a longo prazo. Em vez disso, ofereça uma variedade de alimentos saudáveis, modelando comportamentos alimentares positivos e encorajando a criança a experimentar novos sabores sem pressão. <br><br> Uma nutricionista infantil pode fornecer estratégias personalizadas para ajudar os pais a lidar com a seletividade alimentar, oferecendo dicas sobre como introduzir novos alimentos de maneira criativa e atraente. Além disso, a nutricionista pode avaliar a dieta atual da criança e garantir que, apesar da seletividade, a criança esteja recebendo os nutrientes essenciais para seu desenvolvimento.</p>",
+
+
+                    conteudo4: "<h3>A Importância do ferro na alimentação Infantil</h3> <div><img src='./imgs/comida.png' alt='Artigo 5'></div><p>O ferro é um mineral vital para o desenvolvimento saudável das crianças, especialmente durante os primeiros anos de vida. Ele desempenha um papel crucial na produção de hemoglobina, a proteína nos glóbulos vermelhos que transporta oxigênio para todas as partes do corpo. Além disso, o ferro é essencial para o desenvolvimento cerebral, afetando a memória, a atenção e o aprendizado. <br><br> A deficiência de ferro, conhecida como anemia ferropriva, é uma das deficiências nutricionais mais comuns em crianças pequenas. Os sinais de anemia podem incluir fadiga, fraqueza, irritabilidade e palidez. Se não tratada, a deficiência de ferro pode ter efeitos duradouros no desenvolvimento cognitivo e no crescimento da criança. <br><br> As necessidades de ferro variam de acordo com a idade, e os alimentos ricos em ferro devem ser incluídos regularmente na dieta da criança. As melhores fontes de ferro incluem carnes vermelhas, peixes, feijões, lentilhas, espinafre e cereais fortificados. No entanto, a absorção de ferro pode ser melhorada ao combiná-lo com alimentos ricos em vitamina C, como frutas cítricas e pimentões. <br><br> Uma nutricionista infantil pode ajudar a avaliar a ingestão de ferro do seu filho e recomendar ajustes na dieta para garantir que ele esteja recebendo a quantidade adequada. Em casos de deficiência, a nutricionista pode orientar sobre a necessidade de suplementação e acompanhar o progresso para garantir a saúde e o bem-estar da criança.</p>",
+
+
+                    conteudo5: "<h3>Como prevenir e tratar a obesidade Infantil?</h3> <div><img src='./imgs/batata.jpg' alt='Artigo 5'></div><p>A obesidade infantil é uma preocupação crescente em todo o mundo, e suas consequências podem ser devastadoras para a saúde das crianças, tanto a curto quanto a longo prazo. Crianças obesas têm um risco aumentado de desenvolver doenças crônicas, como diabetes tipo 2, hipertensão, problemas cardíacos e até mesmo problemas emocionais e sociais. <br><br> A prevenção da obesidade começa em casa, com a criação de hábitos alimentares saudáveis e a promoção de um estilo de vida ativo. As crianças devem ser incentivadas a consumir uma dieta equilibrada, rica em frutas, vegetais, grãos integrais e proteínas magras, enquanto a ingestão de alimentos processados e açúcares deve ser limitada. Além disso, a prática regular de atividades físicas é essencial para manter um peso saudável. <br><br> No entanto, cada criança é única, e fatores como genética, ambiente familiar e comportamentos aprendidos também desempenham um papel na predisposição à obesidade. Uma avaliação cuidadosa e personalizada é necessária para entender as causas subjacentes e criar um plano de ação eficaz. <br><br> Uma nutricionista infantil pode ajudar a identificar os fatores de risco específicos de cada criança e trabalhar com os pais para desenvolver um plano alimentar saudável que seja sustentável a longo prazo. Além disso, a nutricionista pode fornecer orientação sobre a importância da atividade física e estratégias para incentivar a adoção de um estilo de vida mais ativo.</p>",
+
+                };
+                document.getElementById('content').innerHTML = content[contentId] || "<h3>Conteúdo não encontrado</h3>";
+            }
+
+            loadContent();
+        });
+    </script>
+
     <script src="./js/mobile-nav-bar.js"></script>
-    <script src="./js/scroll.js"></script>
-    <script src="./js/blog.js"></script>
-    </body>
-    </html>
+</body>
+</html>

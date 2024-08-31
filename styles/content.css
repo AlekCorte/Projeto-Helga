@@ -184,6 +184,12 @@ footer {
         display: none;
     }
 
+
+    p {
+        font-size: 16px;
+        line-height: normal;
+    }
+    
     
 }
 

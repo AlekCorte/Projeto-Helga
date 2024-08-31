@@ -384,7 +384,7 @@ footer {
             max-width: 100%;
             width: 100%;
         }
-        .map-container {
+        #map-container {
             width: 100%;
         }
         iframe {

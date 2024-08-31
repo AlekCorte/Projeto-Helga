@@ -739,14 +739,15 @@ footer {
     .articles-duvidas{
         width: 250px;
         height: 200px;
+        padding: 0;
     }
 
     .articles-duvidas img {
-        height: 130px;
+        height: 150px;
     }
 
     .articles-duvidas p {
-        font-size: 12px;
+        font-size: 14px;
     }
 }
 
@@ -769,7 +770,7 @@ footer {
     }
 
     .articles-duvidas img {
-        height: 100px;
+        height: 120px;
     }
 
     .articles-duvidas p {
@@ -798,15 +799,17 @@ footer {
 
     .articles-duvidas{
         width: 170px;
-        height: 120px;
+        height: 170px;
+
     }
 
     .articles-duvidas img {
-        height: 70px;
+        width: 180px;
+        height: 100px;
     }
 
     .articles-duvidas p {
-        font-size: 10px;
+        font-size: 12px;
     }
 }
 

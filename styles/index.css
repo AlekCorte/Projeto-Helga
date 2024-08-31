@@ -211,8 +211,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 60px;
-    flex-wrap: nowrap;
+    gap: 30px;
     margin-bottom: 120px;
 }
 
@@ -232,10 +231,10 @@ main {
     max-width: 1000px;
     width: 100%;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
     flex-wrap: wrap;
-    gap: 50px;
 }
 
 .exemplos-duvidas a {
@@ -244,8 +243,7 @@ main {
 
 .articles-duvidas {
     padding: 25px;
-    max-width: 300px;
-    width: 100%;
+    width: 300px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -261,7 +259,6 @@ main {
 }
 
 .articles-duvidas > img {
-    max-width: 300px;
     width: 100%;
     height: 198px;
     border: 1px solid #3B8B3B;
@@ -306,6 +303,7 @@ main {
 .exemplos-atendimentos {
     margin-top: 80px;
     display: flex;
+    justify-content: center;
     text-align: center;
     max-width: 100%;
     gap: 70px;
@@ -363,13 +361,10 @@ h3 {
 .section-mensagem {
     width: 100vw;
     height: 100%;
-    margin-bottom: 50px;
-    background-image: url('../imgs/fundo-mensagem.png');
-    background-size: 170%;
+    background: #3B8B3B;
     background-position: center; 
     background-repeat: no-repeat;
-    padding-top: 200px;
-    padding-bottom: 100px;
+    padding-top: 100px;
 }
 
 .mensagem-texto {
@@ -377,11 +372,14 @@ h3 {
     align-items: flex-start;
     gap: 30px;
     max-width: 50%;
-    width: 100%;
+    width: 90%;
+    padding-bottom: 70px;
 }
+
 
 .mensagem-texto > h1 {
     font-size: 50px;
+    text-shadow: 0px 5px 10px rgb(59, 59, 59);
 }
 
 .mensagem-texto > p {
@@ -399,12 +397,22 @@ h3 {
 
 .botao {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    background: #3B8B3B;
+    width: 100%;
+    padding-bottom: 50px;
+    margin: 0% auto;
+    margin-right: 0;
 }
 
 .botao > a > button {
     color: black;
+}
+
+.botao .botao-consulta {
+    background-color: #F89749;
+    color: white;
 }
 
 
@@ -466,7 +474,7 @@ footer {
 
     .section-mensagem {
         background-size: 200%;
-        padding-top: 300px;
+        padding-top: 100px;
     }
 }
 
@@ -483,7 +491,7 @@ footer {
     }
     .lista-nav-centro {
         position: absolute;
-        top: 9.9vh;
+        top: 99px;
         right: 0;
         width: 30vw;
         height: 200px;
@@ -523,7 +531,7 @@ footer {
 
     .section-principal {
         background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)),
         url('../imgs/fujndo-main-mobile.JPG');
         background-size: cover;
         background-position: center; 
@@ -557,8 +565,7 @@ footer {
         width: 100%;
         background-size: 250%;
         padding: 0 50px;
-        padding-bottom: 100px;
-        padding-top: 300px;
+        padding-top: 100px;
     }
     .mensagem-texto {
         max-width: 100%;
@@ -583,6 +590,18 @@ footer {
         padding: 10px;
     }
 
+
+
+
+
+    .section-duvidas {
+        width: 95%;
+    }
+
+
+
+
+
     p {
         font-size: 16px;
         line-height: normal;
@@ -591,12 +610,11 @@ footer {
     .articles-container {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between; /* Ajusta a distribuição dos artigos */
+        justify-content: space-between;
         gap: 20px;
     }
     
     .articles-duvidas {
-        flex: 1 1 calc(33.333% - 20px); /* 3 colunas com espaço entre elas */
         padding: 25px;
         text-align: center;
         transition: transform 0.3s ease;
@@ -637,7 +655,7 @@ footer {
 }
 
 @media (max-width: 999px) {
-    .exemplos-duvidas, .section-atendimentos {
+    .section-atendimentos {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -654,15 +672,6 @@ footer {
     }
     main {
         text-align: center;
-    }
-    .exemplos-duvidas {
-        flex-wrap: wrap;
-    }
-    .exemplos-atendimentos{
-        flex-wrap: wrap;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
     .mensagem-texto p {
         font-size: 18px;
@@ -700,18 +709,47 @@ footer {
         padding-bottom: 5px;
     }
 
+    .section-duvidas h2, .section-atendimentos h2 {
+        font-size: 28px;
+    }
+
+    .section-duvidas p, .section-atendimentos p {
+        font-size: 20px;
+    }
+
     p {
         font-size: 12px;
     }
-    .articles-duvidas {
-        flex-wrap: nowrap;
-        flex: 1 1 calc(50% - 10px);
-    }
-
     .section-mensagem {
         background-size: 400%;
     }
+    .exemplos-atendimentos {
+        flex-direction: column;
+    }
 }
+
+
+
+@media (max-width:640px) {
+
+    .exemplos-duvidas {
+        gap: 10px;
+        width: 100%;
+    }
+    .articles-duvidas{
+        width: 250px;
+        height: 200px;
+    }
+
+    .articles-duvidas img {
+        height: 130px;
+    }
+
+    .articles-duvidas p {
+        font-size: 12px;
+    }
+}
+
 
 @media (max-width:590px) {
     .titulo-section-principal-esquerdo {
@@ -721,9 +759,21 @@ footer {
         width: 70%;
         font-size: 20px;
     }
-    .articles-duvidas {
-        flex-wrap: nowrap;
-        flex: 1 1 calc(50% - 10px);
+
+    
+    .articles-duvidas{
+        width: 200px;
+        height: 150px;
+        gap: 0;
+        
+    }
+
+    .articles-duvidas img {
+        height: 100px;
+    }
+
+    .articles-duvidas p {
+        font-size: 12px;
     }
 }
 
@@ -744,6 +794,19 @@ footer {
 
     .titulo-section-principal-esquerdo {
         font-size: 26px;
+    }
+
+    .articles-duvidas{
+        width: 170px;
+        height: 120px;
+    }
+
+    .articles-duvidas img {
+        height: 70px;
+    }
+
+    .articles-duvidas p {
+        font-size: 10px;
     }
 }
 

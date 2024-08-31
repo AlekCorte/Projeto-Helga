@@ -340,7 +340,7 @@ footer {
     }
     .lista-nav-centro {
         position: absolute;
-        top: 9.9vh;
+        top: 99px;
         right: 0;
         width: 30vw;
         height: 200px;
@@ -419,8 +419,13 @@ footer {
         text-align: center;
     }
 
-    .section-principal-texto h1 {
-        font-size: 26px;
+    .section-principal-texto h1, .section-redes h3, .vamos-conversar h2, h5{
+        font-size: 30px;
+        line-height: normal;
+    }
+
+    .section-redes p, .consulta-nutricional h6{
+        font-size: 18px;
         line-height: normal;
     }
     

@@ -308,6 +308,11 @@ footer {
     margin-bottom: 50px;
 } 
 
+.servicos-footer a, .blog-footer a, .contato-footer a {
+    text-decoration: none;
+    color: #000000;
+}
+
 
 
 

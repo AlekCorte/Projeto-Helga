@@ -251,7 +251,7 @@ footer {
 @media (max-width:1392px) {
     main {
         margin: 0 auto;
-        margin-top: 100px;
+        margin-top: 50px;
         width: 80%;
         display: flex;
         justify-content: center;
@@ -267,6 +267,9 @@ footer {
 @media screen and (max-width: 1024px) {
     body {
         overflow-x: hidden;
+    }
+    main h1 {
+        font-size: 40px;
     }
     .lista-nav-centro {
         position: absolute;
@@ -352,4 +355,11 @@ footer {
     }
 
     
+}
+
+@media (max-width: 818px) {
+    .lista-nav-centro a {
+        font-size: 16px;
+    }
+
 }

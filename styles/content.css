@@ -39,12 +39,24 @@ body {
     margin-bottom: 60px;
 }
 
-p {
+#content h3 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: left;
+    color: #3B8B3B;
+}
+
+p, li {
     font-size: 20px;
     font-weight: 500;
     line-height: 27px;
     text-align: justify;
 }
+
+li {
+    margin-left: 50px;
+}
+
 
 section {
     display: flex;
@@ -195,8 +207,12 @@ footer {
         line-height: normal;
     }
 
+    #content h3 {
+        font-size: 24px;
+    }
 
-    p {
+
+    p, li {
         font-size: 16px;
         line-height: normal;
     }

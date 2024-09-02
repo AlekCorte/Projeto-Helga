@@ -815,6 +815,13 @@ footer {
     }
 }
 
+@media (max-height: 760px) {
+    .section-principal-direito img {
+        height: 100%;
+        width: 100%;
+    }
+}
+
 
 
 

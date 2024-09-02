@@ -815,7 +815,7 @@ footer {
     }
 }
 
-@media (max-height: 760px) {
+@media (max-height: 850px) {
     .section-principal-direito img {
         height: 100%;
         width: 100%;

@@ -284,9 +284,14 @@ main {
     align-items: center;
     flex-direction: column;
     gap: 20px;
+    width: 100%;
 }
 
-
+.video {
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 100%;
+}
 
 
 
@@ -469,11 +474,30 @@ footer {
         margin-top: 10px;
     }
 
+
+
+
+
+    .video-container {
+        margin-left: 10px;
+    }
+
+
     .faq-question p {
         width: 90%;
     }
 
+    .faq-container {
+        margin-top: 100px;
+    }
 
+    main {
+        margin-top: 50px;
+    }
+
+    .article-slider {
+        margin-top: 10px;
+    }
 
 
     .footer-terceira-coluna {

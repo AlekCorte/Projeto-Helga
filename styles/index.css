@@ -144,11 +144,10 @@ main {
     margin-bottom: 120px;
 
     background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(90, 70, 39, 0.3)),
         url('../imgs/fujndo-main-mobile.JPG');
         background-size: cover;
-        background-position: center; 
-        background-repeat: no-repeat;
+
 }
 
 .section-principal-esquerdo {

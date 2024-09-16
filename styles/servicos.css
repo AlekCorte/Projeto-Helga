@@ -147,6 +147,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 15px;
 }
 
 .img img {
@@ -315,6 +316,7 @@ footer {
         width: 100vw;
         height: 300px;
     }
+
 
     p {
         font-size: 16px;

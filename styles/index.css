@@ -144,8 +144,8 @@ main {
     margin-bottom: 120px;
 
     background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.3), rgba(90, 70, 39, 0.3)),
-        url('../imgs/fujndo-main-mobile.JPG');
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url('../imgs/fundo_home.png');
         background-size: cover;
 
 }
@@ -160,7 +160,7 @@ main {
 }
 
 .titulo-section-principal-esquerdo {
-    color: #F89749;
+    color: white;
     font-size: 60px;
     max-width: 800px;
 }

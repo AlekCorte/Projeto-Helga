@@ -75,6 +75,7 @@ nav {
     color: #000000;
     position: relative;
     transition: color 0.3s ease;
+    font-weight: bold;
 }
 .item-lista-nav-centro > a:after {
     content: '';

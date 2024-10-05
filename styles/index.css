@@ -27,20 +27,38 @@ body {
 }
 
 nav {
+    position: relative;
+    top: 0;
     background: white;
-    padding-top: 10px;
     height: 100px;
     border-bottom: 1px solid #000000;
     display: flex;
     width: 100%;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     z-index: 1;
 }
 
+.nav-cima, .nav-baixo {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-cima {
+    background-color: rgb(155, 238, 155);
+    justify-content: center;
+}
+
+.nav-baixo {
+    justify-content: space-between;
+}
+
 .mobile-menu {
     cursor: pointer;
-    display: none;
+    padding-left: 50px;
 }
 
 .mobile-menu div{
@@ -57,14 +75,15 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+    padding: 0 50px;
 }
 
-.lista-nav-centro {
+.lista-nav-centro-desktop {
     display: flex;
     justify-content: center;
     text-align: center;
     gap: 40px;
+    margin-left: 100px;
 }
 
 .item-lista-nav-centro {
@@ -100,16 +119,25 @@ nav {
 }
 
 .nav-direita {
-    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 50px;
+    margin-right: 0;
+    gap: 20px;
 }
 
-.logo-insta {
-    height: 40px;
+.logo-nav {
+    height: 37px;
     transition: transform 0.3s ease;
 }
 
-.logo-insta:hover {
+.logo-nav:hover {
     transform: scale(1.1);
+}
+
+a:has(.logo-nav) {
+    height: 37px;
 }
 
 .menu-toggle {
@@ -121,6 +149,33 @@ nav {
     padding: 10px;
     position: absolute;
     right: 20px;
+}
+
+.lista-nav-centro {
+    position: absolute;
+    top: 99px;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    flex-direction: column;
+    background-color: #fff;
+    display: flex;
+    transform: translateX(100%);
+    display: none;
+    transition: transform 0.3s ease-in;
+    z-index: 3;
+    border: 1px solid black;
+}
+
+.lista-nav-centro li {
+    text-align: left;
+    margin-left: 15px;
+    margin-top: 7px;
+}
+
+.lista-nav-centro.active {
+    transform: translateX(0);
+    display: block;
 }
 
 
@@ -523,14 +578,20 @@ footer {
         border: 1px solid black;
     }
 
+    .lista-nav-centro-desktop {
+        display: none;
+    }
+
     .lista-nav-centro li {
         text-align: left;
         margin-left: 15px;
         margin-top: 7px;
     }
+
     .mobile-menu {
-        display: block;
+        padding-left: 20px;
     }
+
     .lista-nav-centro.active {
         transform: translateX(0);
         display: block;
@@ -543,8 +604,13 @@ footer {
         margin-left: -70px;
         margin-top: 10px;
     }
-    .nav-direita a {
-        display: none;
+    .nav-direita {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 20px;
+        margin-right: 0;
+        gap: 20px;
     }
 
     .section-principal {

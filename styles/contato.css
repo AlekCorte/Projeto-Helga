@@ -425,6 +425,15 @@ footer {
         margin-left: -70px;
         margin-top: 10px;
     }
+
+    .nav-direita {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 20px;
+        margin-right: 0;
+        gap: 20px;
+    }
     main {
             width: 90%;
         }

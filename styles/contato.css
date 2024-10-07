@@ -403,13 +403,18 @@ footer {
         border: 1px solid black;
     }
 
+    .nav-cima img {
+        margin-left: 50px;
+    }
+
+
     .lista-nav-centro li {
         text-align: left;
         margin-left: 15px;
         margin-top: 7px;
     }
     .mobile-menu {
-        display: block;
+        padding-left: 20px;
     }
     .lista-nav-centro.active {
         transform: translateX(0);

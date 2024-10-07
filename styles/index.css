@@ -578,6 +578,10 @@ footer {
         border: 1px solid black;
     }
 
+    .nav-cima img {
+        margin-left: 50px;
+    }
+
     .lista-nav-centro-desktop {
         display: none;
     }
